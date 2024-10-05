@@ -1,0 +1,13 @@
+name: mindacc
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - jupyter
+  - onnx
+  - onnxruntime
+  - pip
+  - pip:
+      - onnxdumper
+      - gradio
