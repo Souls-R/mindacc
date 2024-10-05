@@ -2,6 +2,8 @@
 
 MindAcc 是一个用于对比 MindSpore Lite 与 ONNX 模型推理结果的工具，支持模型转换、随机输入生成、推理运行、对比分析等功能。
 
+onnx 模型中间输出的 dump 能力亦开源并发布在PyPI作为本项目依赖，项目仓库 [onnxdumper](https://gitee.com/noiatrio/onnxdumper)，PyPI地址 [onnxdumper](https://pypi.org/project/onnxdumper/)。
+
 ## 安装
 
 1. 克隆仓库：
