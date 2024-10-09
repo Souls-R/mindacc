@@ -4,9 +4,11 @@ MindAcc 是一个用于对比 MindSpore Lite 与 ONNX 模型推理结果的工�
 
 onnx 模型中间输出的 dump 能力亦开源并发布在PyPI作为本项目依赖，项目仓库 [onnxdumper](https://gitee.com/noiatrio/onnxdumper)，PyPI地址 [onnxdumper](https://pypi.org/project/onnxdumper/)。
 
-## 演示视频
+## 演示视频与设计文档
 
 [README.assets/vedio.mp4](https://gitee.com/noiatrio/mindacc/blob/master/README.assets/vedio.mp4)
+
+[README.assets/mindacc.doc](https://gitee.com/noiatrio/mindacc/blob/master/README.assets/mindacc%E5%BC%80%E5%8F%91%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3.docx)
 
 ## 安装
 
