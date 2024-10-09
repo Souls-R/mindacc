@@ -57,6 +57,62 @@ onnx 模型中间输出的 dump 能力亦开源并发布在PyPI作为本项目�
 ![img3](README.assets/image3.png)
 ![img4](README.assets/image4.png)
 
+## 目录结构
+
+```
+mindacc
+├─ .gitignore
+├─ LICENSE
+├─ mindspore-lite-2.3.1-linux-x64   // MindSpore Lite 端侧运行环境
+├─ input                            // 模型输入数据
+├─ output                           // 模型输出数据
+├─ model                            // 模型文件
+├─ README.assets                    // README.md 图片等资源
+├─ README.md                        // 项目说明文档
+├─ environment.yml                  // conda 环境配置文件
+├─ main.ipynb                       // 主程序
+└─ requirements.txt                 // python 依赖
+```
+
+```
+main.ipynb 
+├─ Import & Config                      // 导入模块与配置
+│  ├─ import            // 导入模块            
+│  ├─ logger            // 日志配置
+│  └─ mslite_config     // MindSpore Lite 环境配置
+├─ Class MindAcc Model                  // 模型管理
+│  ├─ load              // 加载模型
+│  ├─ run_ms_converter  // 运行模型转换
+│  ├─ input_generate    // 生成随机输入
+│  ├─ input_load        // 加载输入数据
+│  ├─ run_ms_dump       // 运行 MindSpore Lite 推理
+│  └─ run_onnx_dump     // 运行 ONNX 推理
+├─ Class MindAcc Mapper                 // 映射器
+│  ├─ get_ms_bin_info   // 获取 mslite 输出文件信息
+│  ├─ read_ms_output    // 读取 mslite 输出文件夹
+│  ├─ simple_map        // 简单映射
+│  └─ get_map_result    // 获取映射结果
+├─ Class MindAcc Analyzer               // 分析器
+│  ├─ cosine_similarity // 余弦相似度
+│  ├─ relative_euclidean_distance   // 相对欧氏距离
+│  ├─ max_absolute_error    // 最大绝对误差
+│  ├─ mean_absolute_error   // 平均绝对误差
+│  ├─ root_mean_square_error    // 均方根误差
+│  ├─ max_relative_error    // 最大相对误差
+│  ├─ mean_relative_error   // 平均相对误差
+│  ├─ accumulated_relative_error    // 累积相对误差
+│  ├─ standard_deviation    // 标准差
+│  └─ kullback_leibler_divergence   // KL散度
+└─ Gradio Interface                     // Gradio 界面
+   ├─ process_model         // 函数绑定
+   ├─ process_input
+   ├─ random_input
+   ├─ run_infer
+   ├─ run_map
+   ├─ run_compare
+   ├─ gr.Blocks             // Gradio 布局组件
+   └─ launch                // Gradio 启动
+```
 ## 许可证
 
 本项目基于 MIT 许可证，详情请参阅 [LICENSE](LICENSE) 文件。
